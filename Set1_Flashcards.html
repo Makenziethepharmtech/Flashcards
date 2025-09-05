@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Set 1 Flashcards</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #fff8f7; margin: 20px; text-align: center; }
+  h1 { color: #e27396; }
+  .flashcard-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+  .flashcard { width: 200px; height: 130px; perspective: 1000px; }
+  .card { width: 100%; height: 100%; position: relative; text-align: center;
+          transition: transform 0.6s; transform-style: preserve-3d; cursor: pointer; }
+  .card.is-flipped { transform: rotateY(180deg); }
+  .card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+               display: flex; align-items: center; justify-content: center; border-radius: 10px;
+               box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 10px; }
+  .card-front { background: #ffe0e9; color: #333; font-weight: bold; }
+  .card-back { background: #e27396; color: white; transform: rotateY(180deg); }
+  .footer { font-size: 10px; color: #777; margin-top: 5px; }
+  .card-wrapper { display: flex; flex-direction: column; align-items: center; }
+  button { background: #e27396; color: white; border: none; padding: 10px 20px; margin: 15px;
+           border-radius: 8px; font-size: 14px; cursor: pointer; }
+  button:hover { background: #cc5c80; }
+</style>
+</head>
+<body>
+<h1>Pharmacy Tech Flashcards – Set 1</h1>
+<button onclick="shuffleCards()">🔀 Shuffle All Cards</button>
+<div class="flashcard-container" id="flashcard-container">
+
+    <!-- 30 Flashcards -->
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Lisinopril</div><div class="card-face card-back">Prinivil, Zestril — ACE inhibitor (HTN)</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Levothyroxine</div><div class="card-face card-back">Synthroid — Hypothyroidism</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Atorvastatin</div><div class="card-face card-back">Lipitor — Hyperlipidemia</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Metformin</div><div class="card-face card-back">Glucophage — Type 2 Diabetes</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Amlodipine</div><div class="card-face card-back">Norvasc — Hypertension</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Metoprolol tartrate</div><div class="card-face card-back">Lopressor — Hypertension</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Omeprazole</div><div class="card-face card-back">Prilosec — GERD</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Simvastatin</div><div class="card-face card-back">Zocor — Hyperlipidemia</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Losartan</div><div class="card-face card-back">Cozaar — Hypertension</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Albuterol</div><div class="card-face card-back">ProAir HFA — Asthma</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Gabapentin</div><div class="card-face card-back">Neurontin — Neuropathic pain, seizures</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Hydrochlorothiazide</div><div class="card-face card-back">Microzide — Hypertension, edema</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Acetaminophen; Hydrocodone</div><div class="card-face card-back">Norco — Pain</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Sertraline</div><div class="card-face card-back">Zoloft — Depression, anxiety</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Furosemide</div><div class="card-face card-back">Lasix — Hypertension, edema</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Fluticasone</div><div class="card-face card-back">Flonase — Allergic rhinitis</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Acetaminophen</div><div class="card-face card-back">Tylenol — Pain, fever</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Amoxicillin</div><div class="card-face card-back">Amoxil — Bacterial infections</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Pantoprazole</div><div class="card-face card-back">Protonix — GERD</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Escitalopram</div><div class="card-face card-back">Lexapro — Depression, anxiety</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Montelukast</div><div class="card-face card-back">Singulair — Asthma, allergies</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Prednisone</div><div class="card-face card-back">Deltasone — Inflammation</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Rosuvastatin</div><div class="card-face card-back">Crestor — Hyperlipidemia</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Ibuprofen</div><div class="card-face card-back">Advil, Motrin — Pain, inflammation, fever</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Meloxicam</div><div class="card-face card-back">Mobic — Arthritis pain</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Clopidogrel</div><div class="card-face card-back">Plavix — Antiplatelet (prevent stroke/MI)</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Propranolol</div><div class="card-face card-back">Inderal — Hypertension, migraine prevention</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Aspirin</div><div class="card-face card-back">Bayer — Pain, inflammation, anticoagulant</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Cyclobenzaprine</div><div class="card-face card-back">Flexeril — Muscle spasms</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+    <div class="card-wrapper"><div class="flashcard"><div class="card" onclick="this.classList.toggle('is-flipped')"><div class="card-face card-front">Tamsulosin</div><div class="card-face card-back">Flomax — BPH</div></div></div><div class="footer">© Makenzie | Study Smart. Pass with Confidence.</div></div>
+
+</div>
+<script>
+function shuffleCards() {
+  const container = document.getElementById("flashcard-container");
+  for (let i = container.children.length; i >= 0; i--) {
+    container.appendChild(container.children[Math.random() * i | 0]);
+  }
+}
+</script>
+</body>
+</html>
+
+
